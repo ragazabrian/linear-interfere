@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Linear › The product development system for teams and agents</title>
+  
+  <meta name="description" content="Purpose-built for modern product teams. Linear sets a new standard for planning and building software with AI workflows, instant sync, and keyboard-first velocity.">
+  <meta name="theme-color" content="#08090a">
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Linear › The product development system for teams and agents">
+  <meta property="og:description" content="Purpose-built for planning and building products in the AI era.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%235E6AD2' d='M12.9 16.4a1.5 1.5 0 0 0 .1 2l68.6 68.6c.5.5 1.4.6 2 .1 10.1-9.2 16.4-22.3 16.4-37C100 22.4 77.6 0 50 0 35.3 0 22.1 6.3 12.9 16.4z'/%3E%3C/svg%3E">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Ambient Backdrop -->
+  <div class="ambient-glow"></div>
+  <div class="ambient-grid"></div>
+
+  <!-- ========================================================================
+       1. Top Site Navigation
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-link" aria-label="Linear Home">
+        <!-- Linear Logo SVG -->
+        <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M12.927 16.371a1.47 1.47 0 0 0 .061 2.027l68.595 68.594c.555.555 1.446.59 2.026.062 10.058-9.152 16.372-22.348 16.372-37.018C99.98 22.402 77.579 0 49.945 0c-14.67 0-27.866 6.313-37.018 16.371M4.353 29.39a1.47 1.47 0 0 0 .309 1.648L68.943 95.32c.434.434 1.09.562 1.648.308a50 50 0 0 0 4.335-2.227c.834-.482.962-1.62.28-2.3L8.882 24.773c-.68-.68-1.818-.553-2.3.281a50 50 0 0 0-2.228 4.336"/>
+        </svg>
+        <span>Linear</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#boardSection" class="nav-link">Product</a></li>
+          <li><a href="#featuresSection" class="nav-link">Features</a></li>
+          <li><a href="#roadmapSection" class="nav-link">Roadmaps</a></li>
+          <li><a href="#agentSection" class="nav-link">Linear Agents</a></li>
+          <li><a href="#changelogSection" class="nav-link">Changelog</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="navSearchBtn" class="btn-command-search" title="Search actions (⌘K)">
+          <span>Search</span>
+          <span class="kbd">⌘K</span>
+        </button>
+        <a href="#boardSection" class="btn btn-ghost btn-sm">Log in</a>
+        <a href="#boardSection" class="btn btn-primary btn-sm">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. Hero Section
+       ======================================================================== -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="hero-pill-wrapper">
+        <a href="#agentSection" class="badge badge-brand badge-interactive">
+          <span>✨ Linear 2026.1 Release — Introducing Autonomous AI Agents</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <h1 class="text-display hero-title">
+        The product development system <br>
+        <span class="text-gradient-brand">for teams and agents</span>
+      </h1>
+
+      <p class="text-body-lg hero-subtitle">
+        Purpose-built for modern product teams. Linear sets a new standard for planning and building software with autonomous AI workflows, instant sync, and keyboard-first velocity.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#boardSection" class="btn btn-primary btn-lg">
+          <span>Start building for free</span>
+          <span>→</span>
+        </a>
+        <button id="heroCmdBtn" class="btn btn-secondary btn-lg">
+          <span>Explore with Command Menu</span>
+          <span class="kbd">⌘K</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         3. Hero Interactive Mockup Window (Interfere window + Linear app)
+         ====================================================================== -->
+    <div class="container app-window-wrapper" id="boardSection">
+      <div class="app-window card-glass">
+        <!-- Titlebar -->
+        <div class="window-titlebar">
+          <div class="window-traffic-lights">
+            <span class="traffic-light close"></span>
+            <span class="traffic-light min"></span>
+            <span class="traffic-light max"></span>
+          </div>
+
+          <div class="window-breadcrumbs">
+            <span>linear.app</span>
+            <span>/</span>
+            <span>engineering</span>
+            <span>/</span>
+            <span class="active">cycle-144-active</span>
+          </div>
+
+          <div class="window-actions">
+            <div class="live-indicator">
+              <span class="live-dot"></span>
+              <span>Multiplayer Sync</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Body Layout -->
+        <div class="app-body">
+          <!-- Left Rail Sidebar -->
+          <aside class="app-sidebar">
+            <div class="sidebar-org-select">
+              <div class="sidebar-org-name">
+                <span class="org-avatar">L</span>
+                <span>Acme Engineering</span>
+              </div>
+              <span style="font-size: 0.6875rem; color: var(--text-tertiary);">▾</span>
+            </div>
+
+            <button id="sidebarNewIssueBtn" class="btn-new-issue-sidebar">
+              <span>+ New Issue</span>
+              <span class="kbd">C</span>
+            </button>
+
+            <div class="sidebar-nav-group">
+              <div class="sidebar-group-title">Your Work</div>
+              <div class="sidebar-nav-item">
+                <div class="sidebar-item-left">
+                  <span>📥</span>
+                  <span>Inbox</span>
+                </div>
+                <span class="sidebar-counter">3</span>
+              </div>
+              <div class="sidebar-nav-item active">
+                <div class="sidebar-item-left">
+                  <span>⚡</span>
+                  <span>My Issues</span>
+                </div>
+                <span class="sidebar-counter">8</span>
+              </div>
+              <div class="sidebar-nav-item">
+                <div class="sidebar-item-left">
+                  <span>🔄</span>
+                  <span>Cycle 144</span>
+                </div>
+                <span class="sidebar-counter">68%</span>
+              </div>
+              <div class="sidebar-nav-item">
+                <div class="sidebar-item-left">
+                  <span>🗺️</span>
+                  <span>Roadmaps</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-nav-group">
+              <div class="sidebar-group-title">Favorites</div>
+              <div class="sidebar-nav-item">
+                <div class="sidebar-item-left">
+                  <span>🔥</span>
+                  <span>Faster app launch</span>
+                </div>
+              </div>
+              <div class="sidebar-nav-item">
+                <div class="sidebar-item-left">
+                  <span>🤖</span>
+                  <span>Linear Agent Tasks</span>
+                </div>
+                <span class="sidebar-counter">4</span>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Center Board View -->
+          <main class="app-center">
+            <div class="center-toolbar">
+              <div class="view-tabs">
+                <span class="view-tab active">Board</span>
+                <span class="view-tab">List</span>
+                <span class="view-tab">Timeline</span>
+              </div>
+
+              <div class="filter-tags">
+                <span class="filter-pill active">All Issues</span>
+                <span class="filter-pill">Cycle 144</span>
+                <span class="filter-pill">Only My Issues</span>
+              </div>
+            </div>
+
+            <!-- Kanban Columns -->
+            <div class="board-columns">
+              <!-- Todo Column -->
+              <div class="board-column">
+                <div class="column-header">
+                  <div class="column-title-wrap">
+                    <svg class="column-status-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#e5a842" stroke-width="1.75" stroke-dasharray="2 2"/></svg>
+                    <span>Todo</span>
+                  </div>
+                  <span id="countTodo" class="sidebar-counter">0</span>
+                </div>
+                <div id="colTodoCards" class="column-cards-container"></div>
+              </div>
+
+              <!-- In Progress Column -->
+              <div class="board-column">
+                <div class="column-header">
+                  <div class="column-title-wrap">
+                    <svg class="column-status-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#f2994a" stroke-width="1.75"/><path d="M8 2 A6 6 0 0 1 14 8 L8 8 Z" fill="#f2994a"/></svg>
+                    <span>In Progress</span>
+                  </div>
+                  <span id="countInProgress" class="sidebar-counter">0</span>
+                </div>
+                <div id="colInProgressCards" class="column-cards-container"></div>
+              </div>
+
+              <!-- Done Column -->
+              <div class="board-column">
+                <div class="column-header">
+                  <div class="column-title-wrap">
+                    <svg class="column-status-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#5e6ad2"/><path d="M5 8.2L7 10.2L11 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Done</span>
+                  </div>
+                  <span id="countDone" class="sidebar-counter">0</span>
+                </div>
+                <div id="colDoneCards" class="column-cards-container"></div>
+              </div>
+            </div>
+          </main>
+
+          <!-- Right Inspector Panel -->
+          <aside id="appInspectorPanel" class="app-inspector"></aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. Customer Logo Wall / Infinite Marquee
+       ======================================================================== -->
+  <section class="logo-wall-section">
+    <div class="logo-wall-title">Powering the companies building the future</div>
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <div class="client-logo"><span>⚡</span><span>OpenAI</span></div>
+        <div class="client-logo"><span>▲</span><span>Vercel</span></div>
+        <div class="client-logo"><span>💳</span><span>Ramp</span></div>
+        <div class="client-logo"><span>🟢</span><span>Cash App</span></div>
+        <div class="client-logo"><span>📊</span><span>Scale AI</span></div>
+        <div class="client-logo"><span>✨</span><span>Cursor</span></div>
+        <div class="client-logo"><span>🛠️</span><span>Retool</span></div>
+        <div class="client-logo"><span>📑</span><span>Substack</span></div>
+        <div class="client-logo"><span>🔴</span><span>Raycast</span></div>
+        <div class="client-logo"><span>💼</span><span>Brex</span></div>
+        <!-- Duplicate for smooth infinite wrap -->
+        <div class="client-logo"><span>⚡</span><span>OpenAI</span></div>
+        <div class="client-logo"><span>▲</span><span>Vercel</span></div>
+        <div class="client-logo"><span>💳</span><span>Ramp</span></div>
+        <div class="client-logo"><span>🟢</span><span>Cash App</span></div>
+        <div class="client-logo"><span>📊</span><span>Scale AI</span></div>
+        <div class="client-logo"><span>✨</span><span>Cursor</span></div>
+        <div class="client-logo"><span>🛠️</span><span>Retool</span></div>
+        <div class="client-logo"><span>📑</span><span>Substack</span></div>
+        <div class="client-logo"><span>🔴</span><span>Raycast</span></div>
+        <div class="client-logo"><span>💼</span><span>Brex</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. 3 Core Pillars (Interfere 3-column Bento Section)
+       ======================================================================== -->
+  <section class="pillars-section" id="featuresSection">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge badge-brand section-badge">The Linear Standard</div>
+        <h2 class="text-h1">A new species of product tool.</h2>
+        <p class="text-body-lg" style="margin-top: 12px;">
+          Purpose-built for modern teams with AI workflows at its core, Linear sets a new standard for planning and building products.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Card 1 -->
+        <div class="pillar-card card-glass">
+          <div>
+            <div class="pillar-icon-box">📐</div>
+            <h3 class="text-h3 pillar-title">Purpose-built</h3>
+            <p class="text-body">
+              Linear is shaped by the practices and principles of world-class product teams. Eliminates bureaucracy and restores momentum.
+            </p>
+          </div>
+          <div class="pillar-visual">
+            <div style="font-size: 0.75rem; color: var(--text-brand); font-weight: 600; margin-bottom: 4px;">⚡ Opinionated Workflows</div>
+            <div style="font-size: 0.6875rem; color: var(--text-tertiary);">Cycles, Triage, Roadmaps, and Automated Releases configured out of the box.</div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="pillar-card card-glass">
+          <div>
+            <div class="pillar-icon-box">🤖</div>
+            <h3 class="text-h3 pillar-title">Powered by agents</h3>
+            <p class="text-body">
+              Designed for workflows shared by humans and agents. From drafting PRDs and triage to autonomous bug fixes and pushing PRs.
+            </p>
+          </div>
+          <div class="pillar-visual">
+            <div style="font-size: 0.75rem; color: var(--text-brand); font-weight: 600; margin-bottom: 4px;">🤖 Autonomous Teammates</div>
+            <div style="font-size: 0.6875rem; color: var(--text-tertiary);">Agents run code reproductions, generate PRs, and triage customer bugs in real-time.</div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="pillar-card card-glass">
+          <div>
+            <div class="pillar-icon-box">⚡</div>
+            <h3 class="text-h3 pillar-title">Designed for speed</h3>
+            <p class="text-body">
+              Sub-50ms latency, instant keyboard navigation, and multiplayer sync keep your engineering team in continuous flow state.
+            </p>
+          </div>
+          <div class="pillar-visual">
+            <div style="font-size: 0.75rem; color: var(--text-brand); font-weight: 600; margin-bottom: 4px;">⌨️ Keyboard-first velocity</div>
+            <div style="font-size: 0.6875rem; color: var(--text-tertiary);">Press <span class="kbd">⌘K</span> for commands or <span class="kbd">C</span> to create an issue in 200ms.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. Deep Feature 1: Intake & Integrations (Slack / Zendesk to Issue)
+       ======================================================================== -->
+  <section class="feature-split-section">
+    <div class="container">
+      <div class="split-layout">
+        <div>
+          <div class="badge badge-brand" style="margin-bottom: 12px;">Intake and integrations</div>
+          <h2 class="text-h1" style="margin-bottom: 16px;">
+            Turn customer feedback into actionable engineering issues.
+          </h2>
+          <p class="text-body-lg" style="margin-bottom: 24px;">
+            Automatically capture conversations from Slack, Zendesk, Discord, and customer support. Linear Agents triage, label, and route them directly to the right engineering team.
+          </p>
+          <div style="display: flex; gap: 10px;">
+            <span class="badge">Linear Asks</span>
+            <span class="badge">Slack Sync</span>
+            <span class="badge">Customer Triage</span>
+          </div>
+        </div>
+
+        <!-- Interactive Slack Box -->
+        <div class="slack-simulation-box">
+          <div class="slack-header">
+            <span>#product-feedback · Slack</span>
+            <span style="font-size: 0.6875rem; color: #888;">Active Thread</span>
+          </div>
+
+          <div class="slack-messages">
+            <div class="slack-message">
+              <div class="slack-avatar" style="background: #2b6cb0;">D</div>
+              <div class="slack-msg-body">
+                <div class="slack-author-line">
+                  <span class="slack-author">didier</span>
+                  <span class="slack-timestamp">10:42 AM</span>
+                </div>
+                <div class="slack-text">
+                  Anyone else noticing the iOS app feels slow to open? We're blocking initial render on full vehicle_state sync every time...
+                </div>
+              </div>
+            </div>
+
+            <div class="slack-message">
+              <div class="slack-avatar" style="background: #9f7aea;">A</div>
+              <div class="slack-msg-body">
+                <div class="slack-author-line">
+                  <span class="slack-author">andreas</span>
+                  <span class="slack-timestamp">10:44 AM</span>
+                </div>
+                <div class="slack-text">
+                  Feels like we could render sooner and load the rest in background. Let's create an issue and assign to me!
+                </div>
+                <button id="slackCreatePill" class="slack-linear-action-pill">
+                  <span>⚡ @Linear create issue and assign to me</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. Deep Feature 2: Visual Planning & Roadmaps
+       ======================================================================== -->
+  <section class="feature-split-section" id="roadmapSection">
+    <div class="container">
+      <div class="split-layout reversed">
+        <!-- Interactive Roadmap Visualizer -->
+        <div class="roadmap-visual-box">
+          <div class="roadmap-timeline-header">
+            <span>Q1 2026 INITIATIVES</span>
+            <span>CYCLE 140 — 146</span>
+          </div>
+
+          <div class="roadmap-rows">
+            <div class="roadmap-row">
+              <span class="roadmap-label">UI Refresh</span>
+              <div class="roadmap-bar-track">
+                <div class="roadmap-bar" style="left: 0%; width: 75%;">Core Screens · 75% Done</div>
+              </div>
+            </div>
+
+            <div class="roadmap-row">
+              <span class="roadmap-label">Autonomous Agents</span>
+              <div class="roadmap-bar-track">
+                <div class="roadmap-bar" style="left: 20%; width: 65%;">Public Beta · Cycle 144</div>
+              </div>
+            </div>
+
+            <div class="roadmap-row">
+              <span class="roadmap-label">Offline Engine</span>
+              <div class="roadmap-bar-track">
+                <div class="roadmap-bar" style="left: 40%; width: 45%;">SQLite Sync · Alpha</div>
+              </div>
+            </div>
+
+            <div class="roadmap-row">
+              <span class="roadmap-label">Access Controls</span>
+              <div class="roadmap-bar-track">
+                <div class="roadmap-bar" style="left: 60%; width: 35%;">Custom Roles</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="badge badge-brand" style="margin-bottom: 12px;">Planning and monitoring</div>
+          <h2 class="text-h1" style="margin-bottom: 16px;">
+            Plan and navigate from idea to launch.
+          </h2>
+          <p class="text-body-lg" style="margin-bottom: 24px;">
+            Align your organization with visual product initiatives, multi-quarter strategic roadmaps, automated cycle burnups, and live PRDs that stay up-to-date with code.
+          </p>
+          <div style="display: flex; gap: 10px;">
+            <span class="badge">Visual Planning</span>
+            <span class="badge">Project Pulse</span>
+            <span class="badge">Initiatives</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. Deep Feature 3: AI and Automations (Agent Console)
+       ======================================================================== -->
+  <section class="feature-split-section" id="agentSection">
+    <div class="container">
+      <div class="split-layout">
+        <div>
+          <div class="badge badge-brand" style="margin-bottom: 12px;">AI and automations</div>
+          <h2 class="text-h1" style="margin-bottom: 16px;">
+            AI teammates that plan, review, and ship code.
+          </h2>
+          <p class="text-body-lg" style="margin-bottom: 24px;">
+            Build and deploy autonomous AI agents that work directly inside your Linear workspace. Work on complex features together or delegate triage, reproduction traces, and PR generation end-to-end.
+          </p>
+
+          <div style="margin-top: 16px;">
+            <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 8px;">
+              Try an interactive agent prompt:
+            </div>
+            <div class="agent-prompt-triggers">
+              <button class="agent-trigger-btn" onclick="appInstance.runAgentPrompt('access-control')">
+                "Rank top 3 permissions requests"
+              </button>
+              <button class="agent-trigger-btn" onclick="appInstance.runAgentPrompt('pr-triage')">
+                "Review mobile triage & PRs"
+              </button>
+              <button class="agent-trigger-btn" onclick="appInstance.runAgentPrompt('spec-draft')">
+                "Draft offline engine PRD"
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Output -->
+        <div class="agent-console-box">
+          <div class="agent-console-header">
+            <div class="agent-status-tag">
+              <span class="ld-orbit">
+                <span class="ld-orbit-track ld-orbit-spin"></span>
+              </span>
+              <span>Linear Agent 2.0 (Claude 3.8 Opus)</span>
+            </div>
+            <span class="kbd">Multi-agent Core</span>
+          </div>
+
+          <div class="agent-console-body">
+            <div id="agentTerminalOutput" class="agent-terminal-output">
+              <span style="color: #62666d;">// Click any prompt trigger on the left to watch Linear Agent run...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. Security & Enterprise Grid (Interfere "Secure by design")
+       ======================================================================== -->
+  <section class="pillars-section" style="padding-top: 40px; padding-bottom: 60px;">
+    <div class="container">
+      <div class="section-head" style="text-align: center; margin: 0 auto 40px;">
+        <div class="badge badge-brand section-badge">Enterprise Ready</div>
+        <h2 class="text-h1">Secure by design. Safe by default.</h2>
+        <p class="text-body-lg" style="margin-top: 12px;">
+          Built to meet the stringent security, governance, and compliance demands of global software leaders.
+        </p>
+      </div>
+
+      <div class="security-grid">
+        <div class="security-card">
+          <div class="security-badge-icon">🛡️</div>
+          <div class="security-card-title">SOC 2 Type II</div>
+          <div class="security-card-desc">Independently audited and certified for enterprise-grade security, availability, and confidentiality.</div>
+        </div>
+
+        <div class="security-card">
+          <div class="security-badge-icon">🔑</div>
+          <div class="security-card-title">SAML SSO & SCIM</div>
+          <div class="security-card-desc">Seamless automated user provisioning and single sign-on with Okta, Azure AD, Google, and OneLogin.</div>
+        </div>
+
+        <div class="security-card">
+          <div class="security-badge-icon">🌐</div>
+          <div class="security-card-title">Data Residency</div>
+          <div class="security-card-desc">EU and US data hosting options with strict isolation, AES-256 encryption at rest, and TLS 1.3 in transit.</div>
+        </div>
+
+        <div class="security-card">
+          <div class="security-badge-icon">⚡</div>
+          <div class="security-card-title">99.99% Uptime SLA</div>
+          <div class="security-card-desc">Global edge distribution ensures zero downtime and instant real-time synchronization worldwide.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. Changelog Section (The Latest)
+       ======================================================================== -->
+  <section class="changelog-section" id="changelogSection">
+    <div class="container">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--border-default); padding-bottom: 20px;">
+        <div>
+          <div class="badge badge-brand" style="margin-bottom: 10px;">Continuous Delivery</div>
+          <h2 class="text-h1">The Latest</h2>
+        </div>
+        <a href="#changelogSection" class="btn btn-ghost btn-sm" style="color: var(--text-brand);">View all releases →</a>
+      </div>
+
+      <div class="changelog-grid">
+        <div class="changelog-card">
+          <div class="changelog-date">NOV 18, 2026</div>
+          <h3 class="changelog-title">Linear Agents v2: Autonomous PR Generation</h3>
+          <p class="changelog-desc">
+            Every agent on Linear is continuously optimized. Now agents can inspect crash logs, write unit tests, and submit reviewable GitHub pull requests.
+          </p>
+        </div>
+
+        <div class="changelog-card">
+          <div class="changelog-date">NOV 04, 2026</div>
+          <h3 class="changelog-title">Native Desktop App with Offline-First Cache</h3>
+          <p class="changelog-desc">
+            Linear is available natively for macOS and Windows. Work seamlessly with zero latency and full offline read/write support.
+          </p>
+        </div>
+
+        <div class="changelog-card">
+          <div class="changelog-date">OCT 21, 2026</div>
+          <h3 class="changelog-title">Universal Command Menu with Fuzzy AI Search</h3>
+          <p class="changelog-desc">
+            Press Cmd+K anywhere to jump between workspaces, run contextual actions, search millions of issues, and steer agent tasks instantly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       11. Call to Action Banner
+       ======================================================================== -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-banner-box">
+        <h2 class="text-display cta-banner-title">
+          Built for the future. <br>
+          <span class="text-gradient-brand">Available today.</span>
+        </h2>
+        <p class="text-body-lg cta-banner-subtitle">
+          Join over 250,000 product teams and engineering leaders who plan, build, and ship with Linear.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#boardSection" class="btn btn-primary btn-lg">Get started for free →</a>
+          <button class="btn btn-secondary btn-lg" onclick="appInstance.commandMenu.open()">
+            <span>Open Command Menu</span>
+            <span class="kbd">⌘K</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       12. Multi-column Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="#" class="brand-link">
+            <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="currentColor">
+              <path d="M12.927 16.371a1.47 1.47 0 0 0 .061 2.027l68.595 68.594c.555.555 1.446.59 2.026.062 10.058-9.152 16.372-22.348 16.372-37.018C99.98 22.402 77.579 0 49.945 0c-14.67 0-27.866 6.313-37.018 16.371M4.353 29.39a1.47 1.47 0 0 0 .309 1.648L68.943 95.32c.434.434 1.09.562 1.648.308a50 50 0 0 0 4.335-2.227c.834-.482.962-1.62.28-2.3L8.882 24.773c-.68-.68-1.818-.553-2.3.281a50 50 0 0 0-2.228 4.336"/>
+            </svg>
+            <span>Linear</span>
+          </a>
+          <p class="footer-desc">
+            The product development system for modern software teams and AI agents.
+          </p>
+          <div class="footer-status-pill">
+            <span class="live-dot"></span>
+            <span>All systems operational (99.99%)</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Product</div>
+          <ul class="footer-links">
+            <li><a href="#boardSection" class="footer-link">Issues</a></li>
+            <li><a href="#roadmapSection" class="footer-link">Roadmaps</a></li>
+            <li><a href="#agentSection" class="footer-link">Linear Agents</a></li>
+            <li><a href="#boardSection" class="footer-link">Cycles & Sprints</a></li>
+            <li><a href="#boardSection" class="footer-link">Linear Insights</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Features</div>
+          <ul class="footer-links">
+            <li><a href="#featuresSection" class="footer-link">Keyboard Shortcuts</a></li>
+            <li><a href="#featuresSection" class="footer-link">GitHub Sync</a></li>
+            <li><a href="#featuresSection" class="footer-link">Slack Asks</a></li>
+            <li><a href="#featuresSection" class="footer-link">Desktop App</a></li>
+            <li><a href="#featuresSection" class="footer-link">Command Menu</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="#featuresSection" class="footer-link">About Us</a></li>
+            <li><a href="#featuresSection" class="footer-link">Linear Method</a></li>
+            <li><a href="#changelogSection" class="footer-link">Changelog</a></li>
+            <li><a href="#featuresSection" class="footer-link">Careers</a></li>
+            <li><a href="#featuresSection" class="footer-link">Brand Assets</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links">
+            <li><a href="https://github.com/ragazabrian/linear-interfere" target="_blank" class="footer-link">GitHub</a></li>
+            <li><a href="https://twitter.com/linear" target="_blank" class="footer-link">Twitter / X</a></li>
+            <li><a href="https://discord.com" target="_blank" class="footer-link">Discord</a></li>
+            <li><button class="footer-link theme-toggle-btn">Toggle Light/Dark Theme</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Linear Orbit Inc. Crafted with pure HTML, CSS & JavaScript.</div>
+        <div class="footer-socials">
+          <button class="theme-toggle-btn btn btn-ghost btn-sm" style="font-size: 0.75rem;">
+            🌓 Theme Toggle
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       13. Interactive Command Menu Modal (Cmd+K)
+       ======================================================================== -->
+  <div id="commandMenuBackdrop" class="command-palette-backdrop">
+    <div class="command-palette">
+      <div class="command-search-row">
+        <span style="color: var(--brand-primary-hover); font-size: 1.125rem;">›</span>
+        <input 
+          id="commandSearchInput" 
+          type="text" 
+          class="command-search-input" 
+          placeholder="Type a command or search actions..."
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <span class="kbd">ESC to close</span>
+      </div>
+
+      <div id="commandList" class="command-list"></div>
+
+      <div class="command-palette-footer">
+        <div>
+          <span>Navigation: </span>
+          <span class="kbd">↑</span> <span class="kbd">↓</span> 
+          <span> Select: </span><span class="kbd">↵</span>
+        </div>
+        <div>
+          <span>Shortcut: </span><span class="kbd">C</span> <span>to create issue</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       14. Interactive Issue Creator Modal ('C' Shortcut)
+       ======================================================================== -->
+  <div id="issueModalBackdrop" class="issue-modal-backdrop">
+    <div class="issue-modal">
+      <div class="modal-header">
+        <div class="modal-title">New Issue</div>
+        <span class="kbd">ESC</span>
+      </div>
+
+      <input 
+        id="newIssueTitleInput" 
+        type="text" 
+        class="input-issue-title" 
+        placeholder="Issue title (e.g. Optimize cold start latency)"
+      >
+
+      <textarea 
+        id="newIssueDescInput" 
+        class="textarea-issue-desc" 
+        placeholder="Add description, acceptance criteria, or reproduction steps..."
+      ></textarea>
+
+      <div class="modal-properties-bar">
+        <select id="newIssueTeamSelect" class="modal-select">
+          <option value="Engineering">Engineering Team</option>
+          <option value="Mobile Core">Mobile Core</option>
+          <option value="AI Systems">AI Systems</option>
+          <option value="Design System">Design System</option>
+        </select>
+
+        <select id="newIssuePrioritySelect" class="modal-select">
+          <option value="medium">Priority: Medium</option>
+          <option value="high">Priority: High</option>
+          <option value="urgent">Priority: Urgent</option>
+          <option value="low">Priority: Low</option>
+        </select>
+      </div>
+
+      <div class="modal-actions">
+        <button id="cancelIssueBtn" class="btn btn-ghost btn-sm">Cancel</button>
+        <button id="submitIssueBtn" class="btn btn-primary btn-sm">Create Issue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Scripts (Pure Vanilla JS - No TSX or transpilation needed)
+       ======================================================================== -->
+  <script src="js/data.js"></script>
+  <script src="js/command-menu.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
